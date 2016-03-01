@@ -2,8 +2,8 @@ var obj = {
   value: 42,
   fn: function() {
     return function() {
-      return obj.value;
-    };
+      return this.value;
+    }.bind(obj);
   }
 };
 
